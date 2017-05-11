@@ -7,7 +7,7 @@ LVAR_INT pFreeSlot
 CheckStore_Object:
 READ_MEMORY pOffset 4 FALSE (hMemObject)
 IF hMemObject = 0xFFFFFF // End of memory
-    IF pFreeSlot > 0
+    IF pFreeSlot > 0 // Was found free slot to store the object
         WRITE_MEMORY pFreeSlot 4 hInObject FALSE
         IS_PC_VERSION
     ELSE
@@ -15,12 +15,12 @@ IF hMemObject = 0xFFFFFF // End of memory
     ENDIF
     CLEO_RETURN 0
 ENDIF
-IF hMemObject = hInObject // The objects is already in memory and activated
+IF hMemObject = hInObject // The object is already in memory and activated
     IS_AUSTRALIAN_GAME
     CLEO_RETURN 0
 ENDIF
 IF hMemObject = 0
-    pFreeSlot = pOffset
+    pFreeSlot = pOffset // Found free slot
 ENDIF
 GOTO CheckStore_Object
 
