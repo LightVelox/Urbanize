@@ -1,8 +1,11 @@
 # Projeto Urbanize
+![](http://2.bp.blogspot.com/-TsoSlXByAcg/V-W7I_RjeHI/AAAAAAAALX8/AN0BmLSSOcESCYSmj4tS7jfJOpWOgm63QCK4B/s1600/urbanize-gta-sa-mod-cleo.jpg)
+
 ## O que é?
 Modificação para GTA San Andreas utilizando a biblioteca CLEO com objetivo de aumentar a diversidade do mundo do jogo, adicionando mais inteligências artificiais.
 Veja e entenda melhor no tópico oficial:
 http://brmodstudio.forumeiros.com/t5486-projeto-urbanize
+
 
 ## Como ajudar?
 O mod está aberto para qualquer um contribuir.
