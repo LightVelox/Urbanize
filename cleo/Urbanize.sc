@@ -55,7 +55,7 @@ IF IS_PLAYER_PLAYING 0
         ENDIF
 
         /////////////////////////////////////////
-        IF GET_RANDOM_OBJECT_IN_SPHERE_NO_SAVE_RECURSIVE (x y z) (GET_OBJ_RADIUS) (FALSE) hObject
+        IF GET_RANDOM_OBJECT_IN_SPHERE_NO_SAVE_RECURSIVE (x y z) (GET_OBJ_RADIUS) (TRUE) hObject
             GOTO for_all_objects_loop
         ENDIF
     ENDIF

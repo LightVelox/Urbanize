@@ -22,6 +22,7 @@ ENDIF
 IF hMemObject = 0
     pFreeSlot = pOffset // Found free slot
 ENDIF
+pOffset += 4
 GOTO CheckStore_Object
 
 }
