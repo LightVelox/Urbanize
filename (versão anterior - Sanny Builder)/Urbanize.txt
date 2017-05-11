@@ -10,6 +10,7 @@ while true
     player.Defined(0)
     jf continue
     
+    
     //-- Triggers
     // Locations
     if 0AB1: call_scm_func @CheckStart_House1 0
@@ -42,10 +43,18 @@ while true
                 then 0AB1: call_scm_func @startNewThread 2 labelName @Script_Dump1 ObjectHandle 0@
                 end  
             end
+            if 4@ == 792  //aw_streettree1
+            then
+                if 0AB1: call_scm_func @Store_Object_128 2 labelName @Running_Pole1 ObjectHandle 0@ 
+                then 0AB1: call_scm_func @startNewThread 2 labelName @Script_Pole1 ObjectHandle 0@
+                end
+            end
         until 8AE3: not 0@ = random_object_near_point 1@ 2@ 3@ in_radius ObjRadius find_next 1
      end
 end
 
+:Script_House3
+end_thread
 
 
 //------- House 1 -------//
@@ -168,6 +177,22 @@ end
 
 
 
+//------- Pole 1 -------//
+:Running_Pole1
+hex //16 slots
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+end
+
+{$I cleo\urbanize\Script_Pole1.txt}
+
+
 
 
 //------- Funcs -------//
@@ -199,7 +224,40 @@ for 2@ = 0 to 64 step 4
     0A8D: 5@ = read_memory 4@ size 4 vp 0
     if 003B:   5@ == 1@
     then        
-        0A8C: write_memory 4@ size 4 value 1@ vp 0 
+        0A8C: write_memory 4@ size 4 value 0 vp 0 
+        break
+    end
+end
+0AB2: ret 0
+
+:Store_Object_128
+0AC6: 3@ = label 0@ offset
+for 2@ = 0 to 128 step 4
+    0A8E: 4@ = 3@ + 2@
+    0A8D: 5@ = read_memory 4@ size 4 vp 0
+    if 003B:   5@ == 1@
+    then        
+        break
+    else
+        if 5@ == 0
+        then
+            0A8C: write_memory 4@ size 4 value 1@ vp 0
+            0485:  return_true
+            0AB2: ret 0
+        end
+    end
+end
+059A:  return_false
+0AB2: ret 0
+
+:Remove_Object_128
+0AC6: 3@ = label 0@ offset
+for 2@ = 0 to 128 step 4
+    0A8E: 4@ = 3@ + 2@
+    0A8D: 5@ = read_memory 4@ size 4 vp 0
+    if 003B:   5@ == 1@
+    then        
+        0A8C: write_memory 4@ size 4 value 0 vp 0 
         break
     end
 end

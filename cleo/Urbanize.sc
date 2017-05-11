@@ -5,7 +5,7 @@ LVAR_INT iModel hObject pLabel bActive
 LVAR_FLOAT x y z
 
 CONST_FLOAT GET_OBJ_RADIUS 150.0
-
+ 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 REQUIRE StoreObj.sc
@@ -37,7 +37,7 @@ IF IS_PLAYER_PLAYING 0
 
     IF GET_RANDOM_OBJECT_IN_SPHERE_NO_SAVE_RECURSIVE (x y z) (GET_OBJ_RADIUS) (FALSE) hObject
         for_all_objects_loop:
-        GET_OBJECT_MODEL  hObject iModel
+        GET_OBJECT_MODEL  hObject iModel 
         /////////////////////////////////////////
 
         IF iModel = 643 //kb_chr_tbl_test (mesa 4 cadeiras)
@@ -63,7 +63,7 @@ IF IS_PLAYER_PLAYING 0
     //---------- End of Triggers
 
 ENDIF
-GOTO main_loop
+GOTO main_loop 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
