@@ -79,8 +79,7 @@ Escreva uma descrição e clique no botão:
 
 ![](http://4.bp.blogspot.com/-4QoBMWHEycc/WROsXEtOtUI/AAAAAAAAOTA/8dC7UwmI4iguIYDuZ-nljP56PnkWoA_NwCK4B/s1600/10.jpg)
 
-Saiba que a primeira linha da descrição é o "título" do Commit, portanto, seja curto e direto. Geralmente escritos no presente, por exemplo escreva "Adicionar" e não "Adicionado" ou "Adicionando". De qualquer modo, sinta-se livre nos nomes que você dará.
-
+Saiba que a primeira linha da descrição é o "título" do Commit, portanto, seja curto e direto.
 As linhas em seguida são uma descrição maior explicando o que você fez.
 E está pronto! Você pode acompanhar o seu branch (o seu novo trabalho no mod) e seus commits (as suas alterações) no GitHub.
 
@@ -91,6 +90,9 @@ Não se esqueça de deixar tudo em dia. Fique de olho no botão na parte inferio
 ![](http://1.bp.blogspot.com/-IPDowq7oumI/WROt3oJ9u4I/AAAAAAAAOTY/V5ZXTH5t65MBLgDtIXHRoqigHPpecISWgCK4B/s1600/11.jpg)
 
 Notou que precisa fazer alterações? Corrigir alguma coisa? Adicionar outra? Faça as alterações e crie um novo commit!
+Caso for uma coisa momentânea, como você ter feito um commit mas logo percebeu um bug, é só você ir em "Undo last commit"
+
+![](http://2.bp.blogspot.com/-hL4Co3MbdlA/WRPWHy8JTlI/AAAAAAAAOUE/zk6OahsuMFExXeuKui9ZUg0FQwj01j26ACK4B/s1600/14.jpg)
 
 Quando quiser partir para novos trabalhos (como algum novo script), crie um novo branch e continue os processos. Eu (Junior_Djjr) e quem sabe alguém mais cuidará do master.
 
