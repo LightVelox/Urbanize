@@ -6,19 +6,18 @@ while true
     then break
     end
 end  
-if 03CA:   object 0@ exists
-then
-    0400: store_coords_to 5@ 6@ 7@ from_object 0@ with_offset 0.0 -1.5 1.0
-    0176: 8@ = object 0@ Z_angle
-    
-    // -- Actor INIT  
-    actor.Create(11@, civmale, #BMOTR1, 5@, 6@, 7@) 
-    0173: set_actor 11@ Z_angle_to 8@
-    
-    // -- Tasks
-    0812: AS_actor 11@ perform_animation "atm" IFP "ped" framedelta 4.0 loopA 1 lockX 0 lockY 0 lockF 0 time -1
-end
-#BMOTR1.Destroy()
+
+0400: store_coords_to 5@ 6@ 7@ from_object 0@ with_offset 0.0 -1.5 1.0
+0176: 8@ = object 0@ Z_angle
+
+// -- Actor INIT  
+actor.Create(11@, civmale, #BMOTR1, 5@, 6@, 7@) 
+#BMOTR1.Destroy() 
+0173: set_actor 11@ Z_angle_to 8@
+
+// -- Tasks
+0812: AS_actor 11@ perform_animation "atm" IFP "ped" framedelta 4.0 loopA 1 lockX 0 lockY 0 lockF 0 time -1
+
 
 while true
     wait 0
