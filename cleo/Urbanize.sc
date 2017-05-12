@@ -1,6 +1,5 @@
 SCRIPT_START
 REQUIRE CheckStore.sc
-REQUIRE StoreObj.sc
 {
 LVAR_INT scplayer
 LVAR_INT iModel hObject pLabel bActive
@@ -19,10 +18,10 @@ IF IS_PLAYER_PLAYING 0
 
     //-- Locations
     IF GOSUB CheckStart_House1
-        STREAM_CUSTOM_SCRIPT "Urbanize/House1.cs" (pLabel)
+        STREAM_CUSTOM_SCRIPT "Urbanize/House1.cs" (pLabel) // - EXAMPLE
     ENDIF
     IF GOSUB CheckStart_House2
-        STREAM_CUSTOM_SCRIPT "Urbanize/House2.cs" (pLabel)
+        STREAM_CUSTOM_SCRIPT "Urbanize/House2.cs" (pLabel) // - EXAMPLE
     ENDIF
     IF GOSUB CheckStart_Queue1
         STREAM_CUSTOM_SCRIPT "Urbanize/Queue1.cs" (pLabel)
@@ -44,7 +43,7 @@ IF IS_PLAYER_PLAYING 0
             ENDIF
         ENDIF
 
-        IF iModel = 1415 //dyn_dumpster (entulhos)
+        IF iModel = 1415 //dyn_dumpster (entulhos) - TODO
             GET_LABEL_POINTER RunningList_Dump1 (pLabel)
             IF CLEO_CALL CheckStore_Object 0 (pLabel, hObject)
                 STREAM_CUSTOM_SCRIPT "Urbanize/Dump1.cs" (pLabel, hObject)
@@ -144,7 +143,7 @@ DUMP
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-FF FF FF FF
+FF FF FF FF // end
 ENDDUMP
 
 RunningList_Dump1: // 16 slots
@@ -153,7 +152,7 @@ DUMP
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-FF FF FF FF
+FF FF FF FF // end
 ENDDUMP
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
