@@ -73,7 +73,9 @@ Enfim, após eu ter feito todas as edições necessárias para o funcionamento d
 
 ![](http://1.bp.blogspot.com/-Y0T7bpmuqok/WROr6258XDI/AAAAAAAAOS4/Ob6huqUzQaUb6XIV3Yjn6JHcyf9s6gSmQCK4B/s1600/9.jpg)
 
-Note que os arquivos alterados estão listados, você pode selecioná-los individualmente para escolher qual dar commit (com o botão `+` ("Stage")) ou simplesmente dar commit em todos.
+Note que os arquivos alterados estão listados, você pode selecioná-los individualmente para escolher qual dar commit (com o botão `+` ("Stage")).
+
+*Não dê commit nos arquivos .cs!!!* Marque os outros, exceto o .cs, por motivos óbvios (além de evitar bugs do GitHub). Se você enviou um .cs sem querer, dê "Undo last commit" (explicado abaixo) e re-envie o commit sem o .cs.
 
 Escreva uma descrição e clique no botão:
 
